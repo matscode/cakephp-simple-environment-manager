@@ -39,7 +39,7 @@ Creates a file named `app.php` inside `config/local/` with the following content
 
 ``` php
 // config/local/app.php
-// value to override in default cake app.php file
+// value to override in default cake config/app.php file
 return
 [
     'debug'          => filter_var( env( 'DEBUG', true ), FILTER_VALIDATE_BOOLEAN ), // the debug can be set to false in your defaul app.php file
