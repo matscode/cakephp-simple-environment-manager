@@ -152,6 +152,10 @@
     switch ( ENVIRONMENT ) {
         case 'local':
             $configFileEnvironment = 'local';
+            // protect project integrity on live environment
+            if ( $_SERVER['REMOTE_ADDR'] != '127.0.0.1' ) { // if its not home(127.0.0.1) then its not local
+                $configFileEnvironment = 'production'; // means this is a production environment
+            }
             break;
         case 'development':
             $configFileEnvironment = 'development';
