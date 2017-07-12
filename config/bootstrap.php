@@ -154,7 +154,9 @@
             $configFileEnvironment = ENVIRONMENT;
             // protect project integrity on live environment
             if ( ! ( isset( $_SERVER['REMOTE_ADDR'] ) && ! empty( $_SERVER['REMOTE_ADDR'] ) && $_SERVER['REMOTE_ADDR'] == '127.0.0.1' ) ) { // if its not home(127.0.0.1) then its not local
-                $configFileEnvironment = 'production'; // means this is a production environment
+               if ( ! ( PHP_SAPI == 'cli' ) ) { // is request !from command line
+                    $configFileEnvironment = 'production'; // means this is a production environment
+                }
             }
             break;
         case 'development':
