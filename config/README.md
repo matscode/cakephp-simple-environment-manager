@@ -6,6 +6,8 @@ Environment options supported are;
 - local (for if you are developing locally on your machine)
 - production (This is recommended for your live configuration overrides)
 theres an additional directory created in `config/` that has these environment names. you can create em if it does not exist.
+<br>
+**NOTE**: If you use `local` environment on live environment, it automatically sets it to `production`, providing you must have the same override files in `production` as is in `local`. but it is recommended you also set your environment.. while it is also adviceable to set default config to production ready values
 
 ### Usage
 Replace your current `bootstrap.php` with the one in this repo.
@@ -43,7 +45,8 @@ Creates a file named `app.php` inside `config/local/` with the following content
 return
 [
     'debug'          => filter_var( env( 'DEBUG', true ), FILTER_VALIDATE_BOOLEAN ), // the debug can be set to false in your defaul app.php file
-    'defaultsdfdsf'  => [
+    'Datasources' => [
+                'default'  => [
 				'className'        => 'Cake\Database\Connection',
 				'driver'           => 'Cake\Database\Driver\Mysql',
 				'persistent'       => false,
@@ -60,6 +63,7 @@ return
 				//'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
 				'url'              => env( 'DATABASE_TEST_URL', null ),
 			]
+        ]
 ]
 ```
 Add the file to `$configFiles['overrides']` array.
