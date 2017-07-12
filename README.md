@@ -17,7 +17,7 @@ define( 'ENVIRONMENT', 'local' );
 ```
 
 #### - Step 2
-Open the `bootstrap.php` file - `line 96`, add your configurations file names.
+Open the `bootstrap.php` file - `line 96` , add your configurations file names.
 <br>
 Configuration file names should be without path or `.php` ext
 ``` php
@@ -36,6 +36,7 @@ $configFiles =
 ##### Example Override
 <br>
 Creates a file named `app.php` inside `config/local/` with the following content
+
 ``` php
 // config/local/app.php
 // value to override in default cake app.php file
