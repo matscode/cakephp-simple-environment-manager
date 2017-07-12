@@ -34,7 +34,7 @@ $configFiles =
         ];
 ```
 ##### Example Override
-<br>
+
 Creates a file named `app.php` inside `config/local/` with the following content
 
 ``` php
@@ -83,7 +83,7 @@ $configFiles =
 LOL, Just kidding, thats all that neccesary. Neither do I like stressful implementation. Have a wonderful time coding
 
 ### Reccomentation
-I would advice you add the content of the `.gitignore` file to your. So whenever you push (probably continous deployment), you are sure as h*ll not gonna push your unwanted overrides in production with. That way, atleast you get an error message saying one of your override file can not be loaded.
+I would advice you add the content of the `.gitignore` file to your existing `.gitignore` file project root or create one. So whenever you push (probably continous deployment), you are sure as h*ll not gonna push your unwanted overrides in production with. That way, atleast you get an error message saying one of your override file can not be loaded.
 
 #### License
 - GNU GPLV3
