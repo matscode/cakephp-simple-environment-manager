@@ -1,0 +1,12 @@
+# Add vendor in production (continous deployment)
+#/vendor/*
+
+
+/tmp/*
+/logs/*
+/bin
+/.idea
+
+# Environment configuration files | keeping the directory, !(its files) in VCS
+/config/development/*
+/config/local/*
