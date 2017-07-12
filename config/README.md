@@ -33,14 +33,14 @@ $configFiles =
                 ]
         ];
 ```
+
 ##### Example Override
-<br>
+
 Creates a file named `app.php` inside `config/local/` with the following content
 ``` php
 // config/local/app.php
 // value to override in default cake app.php file
-return
-[
+return [
     'debug'          => filter_var( env( 'DEBUG', true ), FILTER_VALIDATE_BOOLEAN ), // the debug can be set to false in your defaul app.php file
     'defaultsdfdsf'  => [
 				'className'        => 'Cake\Database\Connection',
@@ -61,6 +61,7 @@ return
 			]
 ]
 ```
+
 Add the file to `$configFiles['overrides']` array.
 <br>
 **PS**: You can override any of your default configurations with your overrides. [Read more](https://book.cakephp.org/3.0/en/development/configuration.html#Cake\Core\Configure) on cake configurations.
