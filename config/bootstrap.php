@@ -117,7 +117,7 @@
     function configFilesLoader( array $configFiles, $environment, $merge = true )
     {
         // confirma to add trailing slash
-        $environment = ( $environment ) ? trim( $environment, '/' ) . DIRECTORY_SEPARATOR : '';
+        $environment = ( $environment ) ? trim( $environment, '/' ) . DS : '';
         // load config overrides
         foreach ( $configFiles as $configFile ) {
             $configFile = $environment . $configFile;
