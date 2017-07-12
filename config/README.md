@@ -35,7 +35,35 @@ $configFiles =
 ```
 ##### Example Override
 <br>
-Creates a file named `app.php` inside `config/local/` and add the file to `$configFiles['overrides']` array
+Creates a file named `app.php` inside `config/local/` with the following content
+``` php
+// config/local/app.php
+// value to override in default cake app.php file
+return
+[
+    'debug'          => filter_var( env( 'DEBUG', true ), FILTER_VALIDATE_BOOLEAN ), // the debug can be set to false in your defaul app.php file
+    'defaultsdfdsf'  => [
+				'className'        => 'Cake\Database\Connection',
+				'driver'           => 'Cake\Database\Driver\Mysql',
+				'persistent'       => false,
+				'host'             => 'localhost',
+				//'port' => 'non_standard_port_number',
+				'username'         => 'root',
+				'password'         => '',
+				'database'         => 'local_test_db',
+				'encoding'         => 'utf8',
+				'timezone'         => 'UTC',
+				'cacheMetadata'    => true,
+				'quoteIdentifiers' => false,
+				'log'              => false,
+				//'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
+				'url'              => env( 'DATABASE_TEST_URL', null ),
+			]
+]
+```
+Add the file to `$configFiles['overrides']` array.
+<br>
+**PS**: You can override any of your default configurations with your overrides. [Read more](https://book.cakephp.org/3.0/en/development/configuration.html#Cake\Core\Configure) on cake configurations.
 ``` php
 $configFiles =
         [
@@ -57,3 +85,4 @@ LOL, Just kidding, thats all that neccesary. Neither do I like stressful impleme
 I would advice you add the content of the `.gitignore` file to your. So whenever you push (probably continous deployment), you are sure as h*ll not gonna push your unwanted overrides in production with. That way, atleast you get an error message saying one of your override file can not be loaded.
 
 #### License
+- GNU GPLV3
