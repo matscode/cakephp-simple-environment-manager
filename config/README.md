@@ -1,4 +1,4 @@
-## CakePHP Simple Environment Manager
+# CakePHP Simple Environment Manager
 Basically Loads and/or overrides configuration file depending on your environment file. Its basically the conventional cakePHP `bootstrap.php` file that was extended
 <br>
 Environment options supported are;
@@ -6,8 +6,12 @@ Environment options supported are;
 - local (for if you are developing locally on your machine)
 - production (This is recommended for your live configuration overrides)
 theres an additional directory created in `config/` that has these environment names. you can create em if it does not exist.
+### `Requirement`
+- CakePHP 3
+
 <br>
-**NOTE**: If you use `local` environment on live environment, it automatically sets it to `production`, providing you must have the same override files in `production` as is in `local`. but it is recommended you also set your environment.. while it is also adviceable to set default config to production ready values
+
+**NOTE** : If you use `local` environment on live environment, it automatically sets it to `production`, providing you must have the same override files in `production` as is in `local`. but it is recommended you also set your environment.. while it is also adviceable to set default config to production ready values
 
 ### Usage
 Replace your current `bootstrap.php` with the one in this repo.
