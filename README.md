@@ -1,4 +1,4 @@
-## CakePHP Simple Environment Manager
+# CakePHP Simple Environment Manager
 Basically Loads and/or overrides configuration file depending on your environment file. Its basically the conventional cakePHP `bootstrap.php` file that was extended
 <br>
 Environment options supported are;
