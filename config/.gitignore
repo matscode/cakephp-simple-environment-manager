@@ -10,3 +10,5 @@
 # Environment configuration files | keeping the directory, !(its files) in VCS
 /config/development/*
 /config/local/*
+!/config/local/empty
+!/config/development/empty
